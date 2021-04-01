@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 import { applyMiddleware } from 'redux';
 
-//reducers go here
+//reducers go here, ya herd Perd?
 const totalCost = (state = 0, action) => {
 
     return state;    
@@ -23,11 +23,24 @@ const pizzaMenu = (state = [], action) => {
     return state;
 }
 
+const tempCustomer = (state = {}, action) => {
+
+    if(action.type === 'tempCustomer') {
+
+        state = action.payload;
+    } 
+
+
+    return state;
+}
+
+
 
 const store = createStore(
     combineReducers({
         totalCost: totalCost,
         pizzaMenu: pizzaMenu,
+        tempCustomer: tempCustomer,
     }),
     applyMiddleware(logger)
 );
