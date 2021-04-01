@@ -4,12 +4,19 @@ Before you get started make sure to read through **ALL** requirements and outlin
 
 # To-dos
 
+[x] npm install
+[x] get server up
+[x] make databases
+[ ] setup router/routes for Home/CustomerForm/Checkout/AdminOrders
+  - AdminOrders should NOT be on the nav bar
 [ ] Home
   [ ] Header
-      [ ] H1 for name
-      [ ] make button to go to cart
-      [ ] Have total price
+      [X] H1 for name
+      <!-- [ ] make button to go to cart -->
+      [X] useSelector to get price
+      [X] Have total price
   [ ] Pizza List
+  
       [ ] GET call to axios for pizza info (api/pizza) - REDUX dispatch to store?
       [ ] NEXT button that links to CustomerForm
   [ ] Pizza Item
@@ -33,6 +40,12 @@ Before you get started make sure to read through **ALL** requirements and outlin
     [ ] Display to doms
     [ ] Checkout Button that onClick combines our elements to fit the 'Data Document' (example below)
 [ ] AdminOrders
+    [ ] GET route to api/order - dispatch to REDUX
+    [ ] useSelector to get: 
+      - customer name, 
+      - time order placed, 
+      - type (pickup or delivery), 
+      - cost
 
 
 ```

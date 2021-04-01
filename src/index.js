@@ -7,9 +7,27 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 import { applyMiddleware } from 'redux';
 
+//reducers go here
+const totalCost = (state = 0, action) => {
+
+    return state;    
+}
+
+const pizzaMenu = (state = [], action) => {
+
+    if(action.type === 'setPizzaMenu') {
+        
+        state = [...state, action.payload];
+    }
+    
+    return state;
+}
+
+
 const store = createStore(
     combineReducers({
-
+        totalCost: totalCost,
+        pizzaMenu: pizzaMenu,
     }),
     applyMiddleware(logger)
 );
