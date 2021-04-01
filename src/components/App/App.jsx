@@ -2,9 +2,10 @@ import React from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import { useDispatch } from 'react-redux';
+import Router from '../Router/Router';
+
 
 
 
@@ -26,7 +27,7 @@ let getPizzas = () =>{
 
   return (
     <div className='App'>
-      <Header />
+      <Router />
     </div>
   );
 }

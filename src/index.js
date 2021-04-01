@@ -16,8 +16,8 @@ const totalCost = (state = 0, action) => {
 const pizzaMenu = (state = [], action) => {
 
     if(action.type === 'setPizzaMenu') {
-        
-        state = [...state, action.payload];
+
+        state = action.payload;
     }
     
     return state;

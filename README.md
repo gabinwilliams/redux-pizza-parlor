@@ -10,21 +10,24 @@ Before you get started make sure to read through **ALL** requirements and outlin
 [ ] setup router/routes for Home/CustomerForm/Checkout/AdminOrders
   - AdminOrders should NOT be on the nav bar
 [ ] Home
-  [ ] Header
+  [X] Header
       [X] H1 for name
       <!-- [ ] make button to go to cart -->
       [X] useSelector to get price
       [X] Have total price
-  [ ] Pizza List
-  
-      [ ] GET call to axios for pizza info (api/pizza) - REDUX dispatch to store?
-      [ ] NEXT button that links to CustomerForm
+  [X] Pizza List
+      [X] GET call to axios for pizza info (api/pizza) - REDUX dispatch to store?
+      [X] useSelector to get pizza info from Redux store
+      [X] Bring in Link from react-router-dom
+      [X] NEXT button that links to CustomerForm
   [ ] Pizza Item
-      [ ] display on DOM 
-      [ ] buttons 
-      [ ] name, description and price
+      [X] display on DOM 
+      [/] buttons 
+      [X] name, description and price
+      [ ] dispatch route to send pizza object to array of pizza objects
+      [ ] conditional render for 'add' and 'remove'
 [ ] CustomerForm
-  [ ] Bring in Header from Home 
+  [X] Bring in Header from Home 
   [ ] Inputs to get customer info
   [ ] Checkbox for delivery or pickup
   [ ] Button to submit info onClick

@@ -1,15 +1,21 @@
 import React from 'react';
-import axios from 'axios';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector } from 'react-redux';
+import { Link, Router, Rout } from 'react-router-dom';
+import PizzaItem from '../PizzaItem/PizzaItem';
 
 
 const PizzaList = () => {
- 
-    
+    const pizzaList = useSelector( store => {
+        return store.pizzaMenu;
+    })
     return (
-        <div>
-            
-        </div>
+        <>
+            {/* <p>{JSON.stringify(pizzaList)}</p> */}
+            {pizzaList.map( (pizza) =>  <PizzaItem pizza = { pizza } key = {pizza.id} /> )}
+            <Link to = '/customer'>
+                <button>Next</button>
+            </Link>
+        </>
     )
 }
 
