@@ -1,6 +1,57 @@
 # React Pizza Parlor
 
-Before you get started make sure to read through **ALL** requirements and outline a plan for your group. Assign out tasks and use branches to allow team members to work in parallel.
+Before you get started make sure to read through **ALL** requirements and outline a plan for your group. Assign out tasks and use branches to allow team members to work in parallel=.
+
+# To-dos
+
+[ ] Home
+  [ ] Header
+      [ ] H1 for name
+      [ ] make button to go to cart
+      [ ] Have total price
+  [ ] Pizza List
+      [ ] GET call to axios for pizza info (api/pizza) - REDUX dispatch to store?
+      [ ] NEXT button that links to CustomerForm
+  [ ] Pizza Item
+      [ ] display on DOM 
+      [ ] buttons 
+      [ ] name, description and price
+[ ] CustomerForm
+  [ ] Bring in Header from Home 
+  [ ] Inputs to get customer info
+  [ ] Checkbox for delivery or pickup
+  [ ] Button to submit info onClick
+  [ ] Dispatch customer info to Redux
+[ ] Checkout
+  [ ] Separate Header -- this one is blank except for H1 tag
+  [ ] CheckoutStatus
+    [ ] useSelector to get customer info
+    [ ] Display to DOM
+  [ ] CheckoutOrderTable
+    [ ] useSelector for cart & cartTotal
+    [ ] useSelector for customer info
+    [ ] Display to doms
+    [ ] Checkout Button that onClick combines our elements to fit the 'Data Document' (example below)
+[ ] AdminOrders
+
+
+```
+{
+  "customer_name": "Donatello",
+  "street_address": "20 W 34th St",
+  "city": "New York",
+  "zip": "10001",
+  "total": "27.98",
+  "type": "Pickup",
+  "pizzas": [{
+    "id": "1",
+    "quantity": "1"
+  },{
+    "id": "2",
+    "quantity": "1"
+  }]
+}
+```
 
 ### Setup
 
