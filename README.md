@@ -24,24 +24,26 @@ Before you get started make sure to read through **ALL** requirements and outlin
       [X] display on DOM 
       [/] buttons 
       [X] name, description and price
-      [ ] dispatch route to send pizza object to array of pizza objects
+      [X] dispatch route to send pizza object to array of pizza objects
       [ ] conditional render for 'add' and 'remove'
-[ ] CustomerForm
+[X] CustomerForm
   [X] Bring in Header from Home 
-  [ ] Inputs to get customer info
-  [ ] Checkbox for delivery or pickup
-  [ ] Button to submit info onClick
-  [ ] Dispatch customer info to Redux
+  [X] Inputs to get customer info
+  [X] Checkbox for delivery or pickup
+  [X] Button to submit info onClick
+  [X] Dispatch customer info to Redux
 [ ] Checkout
-  [ ] Separate Header -- this one is blank except for H1 tag
-  [ ] CheckoutStatus
-    [ ] useSelector to get customer info
-    [ ] Display to DOM
+  [X] Separate Header -- this one is blank except for H1 tag
+  [X] CheckoutStatus
+  [ ] CheckoutOrderTable
+    [X] useSelector to get customer info
+    [X] Display to DOM
   [ ] CheckoutOrderTable
     [ ] useSelector for cart & cartTotal
     [ ] useSelector for customer info
     [ ] Display to doms
     [ ] Checkout Button that onClick combines our elements to fit the 'Data Document' (example below)
+    [ ]
 [ ] AdminOrders
     [ ] GET route to api/order - dispatch to REDUX
     [ ] useSelector to get: 

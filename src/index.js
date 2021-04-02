@@ -19,20 +19,50 @@ const pizzaMenu = (state = [], action) => {
 
         state = action.payload;
     }
+
     
+    return state;
+}
+
+const tempOrder = (state = [], action) => {
+
+    if (action.type === 'tempOrder'){
+        state = action.payload;
+    }
+    console.log('temp order', tempOrder);
+    return state;
+}
+
+const tempCart = ( state =[], action) => {
+    if( action.type === 'addCart' ) {
+        state = [...state, action.payload];
+    }
+    if( action.type === 'removeCart' ) {
+        state = [...state.slice(0, state.indexOf(action.payload)), ...state.slice(state.indexOf(action.payload) + 1)];
+    }
     return state;
 }
 
 const tempCustomer = (state = {}, action) => {
 
+    // if (action.type === 'tempOrder'){
+    //     state = {...state, pizzas: action.payload }
+    // }
+
     if(action.type === 'tempCustomer') {
-
-        state = action.payload;
+        state = {
+            ...state,
+            customer_name: action.payload.customer_name, 
+            street_address: action.payload.street_address, 
+            city: action.payload.city, 
+            zip: action.payload.zip, 
+            type: action.payload.type
+        } //payload needs to be split up into properties action.payload};
+       
     } 
-
-
+    console.log( 'state object:', state )
     return state;
-}
+};
 
 
 
@@ -41,6 +71,8 @@ const store = createStore(
         totalCost: totalCost,
         pizzaMenu: pizzaMenu,
         tempCustomer: tempCustomer,
+        tempOrder: tempOrder,
+        tempCart: tempCart
     }),
     applyMiddleware(logger)
 );
