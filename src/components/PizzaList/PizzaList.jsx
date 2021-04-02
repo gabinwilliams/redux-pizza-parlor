@@ -14,7 +14,9 @@ const PizzaList = () => {
         return store.pizzaMenu;
     })
 
-    const [tempCart, setTempCart] = useState([]);
+    const tempCart = useSelector( store => {
+        return store.tempCart;
+    })
 
     const sendCartToRedux = () =>{
         console.log( 'inSendCartToRedux( ')
@@ -24,7 +26,7 @@ const PizzaList = () => {
     return (
         <>
             {/* <p>{JSON.stringify(pizzaList)}</p> */}
-            {pizzaList.map( (pizza) =>  <PizzaItem tempCart = {tempCart} setTempCart = {setTempCart} pizza = { pizza } key = {pizza.id} /> )}
+            {pizzaList.map( (pizza) =>  <PizzaItem pizza = { pizza } key = {pizza.id} /> )}
             <Link to = '/customer'>
                 <button onClick={() => sendCartToRedux()}>Next</button>
             </Link>

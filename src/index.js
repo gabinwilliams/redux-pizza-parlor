@@ -58,7 +58,6 @@ const tempCustomer = (state = {}, action) => {
             zip: action.payload.zip, 
             type: action.payload.type
         } //payload needs to be split up into properties action.payload};
-       
     } 
     console.log( 'state object:', state )
     return state;
